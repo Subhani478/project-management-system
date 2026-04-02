@@ -74,3 +74,5 @@ class CommentSerializer(serializers.ModelSerializer):
     def update(self, instance, validated_data):
         # Custom logic can be added here
         return super().update(instance, validated_data)
+    
+    #Just for testing Purposes
