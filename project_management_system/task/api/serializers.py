@@ -1,12 +1,9 @@
-
 from rest_framework import serializers
 from django.contrib.auth import get_user_model
 from task.models import Task, Comment
 from users.api.serializers import UserSerializer
 
 User = get_user_model()
-
-
 
 class TaskSerializer(serializers.ModelSerializer):
     """Serializer for Task model with validation and nested user details."""
@@ -50,8 +47,6 @@ class TaskSerializer(serializers.ModelSerializer):
     def update(self, instance, validated_data):
         # Custom logic can be added here
         return super().update(instance, validated_data)
-
-
 
 class CommentSerializer(serializers.ModelSerializer):
     """Serializer for Comment model with content validation and nested author details."""
